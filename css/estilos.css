@@ -412,7 +412,7 @@ body{
         margin-top: 5rem;
         grid-area: spoty1;
        }
-    .txt2{
+    /* .txt2{
         margin-top: 5rem;
         grid-area: texto2;
         text-align: center;
@@ -423,7 +423,7 @@ body{
     align-self: center;
    justify-self: start;
 
-    }
+    } */
     .a2do3{
         margin-left: 5rem;
         margin-top: 5rem;
@@ -494,12 +494,7 @@ body{
     background-color: #fff;
     
 }
-.form__container {
-    width: 100%;
-    display: grid;
-    gap: 1rem;
-    grid-auto-columns: 100%;
-}
+
 
 .maps{
     margin-top: 3rem;
@@ -510,6 +505,11 @@ body{
     font-style: italic;
     margin-left: 5rem;
 }
+.textocontact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .maps iframe{
 
     margin-top: 5%;
@@ -518,12 +518,9 @@ body{
     margin-left: 1rem;
 }
 .footercontacto {
-    grid-area: footerinicio;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center;
 
-}
+} 
 .footercontacto  img{
     height: 4rem;
     width: 4rem;}
