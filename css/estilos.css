@@ -462,7 +462,7 @@ body{
     }
     .menunavcontacto  a:hover{
         color:rgba(226, 211, 169, 0.7)}
-.maincontact{
+/* .maincontact{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 0.3fr 1fr;
@@ -470,7 +470,7 @@ body{
     "contact1 contact1 contact1"
     "form1 . . "
     "mapa . .";
-}
+} */
 .contact1{
     grid-area: contact1;
     text-align: center;
@@ -485,25 +485,24 @@ body{
     margin-top: 1rem;
     margin-bottom: 4rem;
 }
-.form{
-    font-size: 1.7rem;
-    width: 20rem;
-    color:#fcbf7c;
-    height: 25rem;
-    display: flex;
-    margin-left: 10rem;
-    align-items: center;
-
+.form1{
+    color: #f98304;
+}
+.form1 button{
+    margin-top: 2rem;
+    color: #000000;
+    background-color: #fff;
+    
 }
 .form__container {
     width: 100%;
     display: grid;
     gap: 1rem;
     grid-auto-columns: 100%;
-
 }
 
 .maps{
+    margin-top: 3rem;
     grid-area: mapa ;
     font-size: 2rem;
     color:#fcbf7c;
