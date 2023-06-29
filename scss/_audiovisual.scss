@@ -1,0 +1,122 @@
+// // .bodyaudio{
+// //     display: grid;
+// //     grid-template-columns: 1fr 1fr 1fr;
+// //     grid-template-rows:  .1fr .5fr 1fr .2fr;
+// //     grid-template-areas:
+// //     "head head head"
+// //     "texto texto texto"
+// //     "lista1 video lista2"
+// //     "footer footer footer";
+// // }
+ .navaudio{
+     grid-area: head;
+     background-color: #CFB4B4;
+     font-size: 3rem;
+    
+     .collapse{
+         justify-content: center;
+     }
+     img{
+         height: 4.5rem;
+         width: 4rem;
+     }
+ }
+
+
+
+     .presentacionaudio{
+         grid-area: texto;
+         display: flex;
+         flex-direction: column;
+         text-align: center;
+         padding-bottom: 0.3rem;
+         li{
+             list-style-type: none;
+         }
+         h2{
+             font-size: 5rem;
+             text-decoration: underline;
+             margin-top: 10rem;
+             color: rgb(0, 0, 0); }
+             p{
+
+                 font-size: 2.3rem;
+                 padding: 0 2rem 0;
+                 color:  #fcbf7c ;
+                
+             }
+             ul{
+                 margin-top: 3rem;
+                 text-decoration: underline;
+                 color:  #f98304 ;
+                 font-size: 2.3rem;
+             }
+             h4{
+                 font-size: 2.5rem;
+                 color:  #f98304 ;
+                 display: none;
+             }
+         }
+         .parrafo1{
+             margin-top: 5rem;
+         }
+         .video{
+             grid-area: video;
+             margin-top: 5rem;
+             iframe{
+                 width: 60rem;
+                 height: 40rem;
+             }
+         }
+         .lista1{
+             grid-area: lista1;
+              align-self: center;
+              justify-self: center;
+             font-size: 2.3rem;
+             a{
+                 text-decoration: underline;
+                 list-style-type: none;
+                 color: #f98304;
+                 margin-left: 2rem;
+                 &:hover{
+                     font-size: 2.5rem;
+                     color: #fcbf7c;                    
+                 }
+             }
+         }
+         .lista2{
+             grid-area: lista2;
+              align-self: center;
+              justify-self: center;
+             font-size: 2.3rem;
+             margin-left: 2rem;
+             a{
+                 margin-left: 2rem;
+                 text-decoration: underline;
+                 list-style-type: none;
+                 color: #f98304;
+                 &:hover{
+                     font-size: 2.5rem;
+                     color: #fcbf7c;                    
+                 }
+             }
+
+         }
+         .videoylista{
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: 
+            "lista1 video lista2";
+         }
+         .redes img{
+             width: 4rem;
+             height: 4rem;
+         }
+         .footeraudio {
+             grid-area: footer;
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+       
+         }

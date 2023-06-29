@@ -1,3 +1,4 @@
+@import "audiovisual" ;
 *{
     padding: 0;
     margin: 0;
@@ -8,55 +9,54 @@ html{
     font-size: 62.5%;
 }
 body{
-    // background-image: url(../multimedia/ocaso.jpg);
-    // background-position: center;
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // background-attachment: fixed;
+    
     background-color: #3f3737;
 }
 .bodyinicio{
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.15fr 1fr .5fr 0.1fr;
+    grid-template-rows: 0.15fr 1fr .3fr 0.1fr;
     grid-template-areas:
     "headerinicio  "
     "logoinicio  "
     "fechas "
     "footerinicio ";
 }
-.menunavinicio {
-    li{
-    list-style-type: none;}
-    ul{display: flex;
-        justify-content: space-evenly;
-        margin-top: 3rem;
-    }
-    a{
-        text-decoration: none;
-        font-size: 3rem;
-        color:  rgba(226, 211, 169, 0.473);
-        font-family: 'Raleway', sans-serif;
-        ;
-        &:hover{
-            color:rgba(226, 211, 169, 0.781);
 
-        }
+.navbarini{
+    grid-area: headerinicio;
+    background-color: #CFB4B4;
+    font-size: 3rem;
+    
+    .collapse{
+        justify-content: center;
+    }
+    img{
+        height: 4.5rem;
+        width: 4rem;
     }
 }
-.logoinicio{
-    grid-area: logoinicio;
-    justify-items: center;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    align-items: center;
-    img{ margin-top: 2rem;
-    }
-
+.carrusell{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    grid-area: carrete;
+display: flex;
+justify-content: center;
+img{
+    height: 50rem;
+    
 }
+.imagenescarru{
+   height: 40rem;
+   width: 50rem;
+}
+}
+
+
+
 .fechas{
+    margin-top: 3rem;
     font-size: 2.5rem;
     padding-top: 5rem;
     text-align: center;
@@ -78,11 +78,14 @@ body{
         }
     }
     p{text-decoration: underline;
-        margin-top: 2rem;
+        margin-top: 1rem;
         color: black;
     }
     h2{
+        margin-top: 2rem;
+        font-size: 4rem;
         color: black;
+        text-decoration: underline;
     }
 }
 .footerinicio{
@@ -112,131 +115,7 @@ body{
     font-style: italic;
 }
 // PAGINA AUDIOVISUAL//
-.bodyaudio{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows:  .1fr .5fr 1fr .2fr;
-    grid-template-areas:
-    "head head head"
-    "texto texto texto"
-    "lista1 video lista2"
-    "footer footer footer";
-}
-.logoaudio{
-    display: none;
-}
-.navaudio{
-    ul{
-        display: flex;
-        justify-content: space-evenly;
-        margin-top: 3rem;
-       }
-       li{
-        list-style-type: none;
-       }
-       a{
-        text-decoration: none;
-        font-size: 3rem;
-        color:  rgba(226, 211, 169, 0.473);
-        font-family: 'Raleway', sans-serif;
-        ;
-        &:hover{
-            color:rgba(226, 211, 169, 0.781);
-        }
-    }  
-}
-.headeraudio{
-    grid-area: head; }
 
-    .presentacionaudio{
-        grid-area: texto;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        padding-bottom: 0.3rem;
-        li{
-            list-style-type: none;
-        }
-        h2{
-            font-size: 5rem;
-            text-decoration: underline;
-            margin-top: 10rem;
-            color: rgb(0, 0, 0); }
-            p{
-
-                font-size: 2.3rem;
-                padding: 0 2rem 0;
-                color:  #fcbf7c ;
-                
-            }
-            ul{
-                margin-top: 3rem;
-                text-decoration: underline;
-                color:  #f98304 ;
-                font-size: 2.3rem;
-            }
-            h4{
-                font-size: 2.5rem;
-                color:  #f98304 ;
-                display: none;
-            }
-        }
-        .parrafo1{
-            margin-top: 5rem;
-        }
-        .video{
-            grid-area: video;
-            margin-top: 5rem;
-            iframe{
-                width: 80rem;
-                height: 60rem;
-            }
-        }
-        .lista1{
-            grid-area: lista1;
-            align-self: center;
-            justify-self: center;
-            font-size: 2.3rem;
-            a{
-                text-decoration: underline;
-                list-style-type: none;
-                color: #f98304;
-                margin-left: 2rem;
-                &:hover{
-                    font-size: 2.5rem;
-                    color: #fcbf7c;                    
-                }
-            }
-        }
-        .lista2{
-            grid-area: lista2;
-            align-self: center;
-            justify-self: center;
-            font-size: 2.3rem;
-            margin-left: 2rem;
-            a{
-                margin-left: 2rem;
-                text-decoration: underline;
-                list-style-type: none;
-                color: #f98304;
-                &:hover{
-                    font-size: 2.5rem;
-                    color: #fcbf7c;                    
-                }
-            }
-
-        }
-        .redes img{
-            width: 4rem;
-            height: 4rem;
-        }
-        .footeraudio {
-            grid-area: footer;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        
-        }
         //pagina discografia//
         .maindisco{
             display: grid;
@@ -475,75 +354,64 @@ body{
 {
     .bodyinicio{
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: .25fr 1fr .25fr;
+        grid-template-rows: .2fr 1fr 1fr .25fr;
         grid-template-areas:
-        "head1 logo1"
+        "headerinicio1 headerinicio1"
+        "carrete carrete"
         "fechas fechas"
         "foot1 foot1";
         }
-        .headerinicio{
-            grid-area: head1;
-            ul{
-                display: flex;
-                flex-direction: column;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            li{
-                margin-left: 0.5rem;
-            }
-        }
+          .headerinicio{
+              grid-area: headerinicio1;
+          }
+          .mainini{
+            grid-area: carrete;
+          }
+        
         .fechas{
             grid-area: fechas;
             align-self: center;
         }
-        .logoinicio{
-            grid-area: logo1;
-            align-self: center;
-            justify-self: center;
-            img{
-                height: 20rem;
-                width: auto;}
-        }
+       
         .footerinicio{
             grid-area: foot1;
         } }
         //audiovisual//
+                .videoylista{
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                grid-template-areas: 
+                "lista1 video"
+                "lista2 video";
+            }
+        
 
                 //mediaquerie celular//
                 @media screen and (max-width: 500px)
                 {.bodyinicio{
                     grid-template-columns: 1fr;
-                    grid-template-rows: .5fr 1fr .3fr;
+                    grid-template-rows: .3fr .3fr .3fr;
                     grid-template-areas:
                     "head1"
                     "fechas1"
                     "footer1";
                 }
                 .headerinicio{
-                    display: flex;
-                    justify-content: center;
-                }
-                .menunavinicio{
+                   
                     grid-area: head1;
-            
+                    
                 }
-            
-                .logoinicio{
+                .mainini{
                     display: none;
                 }
                 .fechas{
                     
                     grid-area: fechas1;
                 }
-                .dropdown{
-                    display: flex;
-                }
+                
                 .footerinicio{
                     grid-area: footer1;
-                    p{
-                        color: white;
-                    }
+                    
                 }
                 }
         

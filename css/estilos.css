@@ -1,147 +1,14 @@
-* {
-  padding: 0;
-  margin: 0;
-  font-family: "Raleway", sans-serif;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  background-color: #3f3737;
-}
-
-.bodyinicio {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 0.15fr 1fr 0.5fr 0.1fr;
-  grid-template-areas: "headerinicio  " "logoinicio  " "fechas " "footerinicio ";
-}
-
-.menunavinicio li {
-  list-style-type: none;
-}
-.menunavinicio ul {
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 3rem;
-}
-.menunavinicio a {
-  text-decoration: none;
-  font-size: 3rem;
-  color: rgba(226, 211, 169, 0.473);
-  font-family: "Raleway", sans-serif;
-}
-.menunavinicio a:hover {
-  color: rgba(226, 211, 169, 0.781);
-}
-
-.logoinicio {
-  grid-area: logoinicio;
-  justify-items: center;
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: column;
-  align-items: center;
-}
-.logoinicio img {
-  margin-top: 2rem;
-}
-
-.fechas {
-  font-size: 2.5rem;
-  padding-top: 5rem;
-  text-align: center;
-  font-family: "Raleway", sans-serif;
-  grid-area: fechas;
-}
-.fechas li {
-  list-style-type: none;
-}
-.fechas ul {
-  margin-top: 2rem;
-}
-.fechas a {
-  text-decoration: none;
-  font-size: 3rem;
-  color: rgba(226, 211, 169, 0.671);
-  font-family: "Raleway", sans-serif;
-  transition: all 0.5 ease;
-}
-.fechas a:hover {
-  color: rgb(226, 211, 169);
-}
-.fechas p {
-  text-decoration: underline;
-  margin-top: 2rem;
-  color: black;
-}
-.fechas h2 {
-  color: black;
-}
-
-.footerinicio {
-  grid-area: footerinicio;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.footerinicio img {
-  height: 4rem;
-  width: 4rem;
-}
-
-.dropdown {
-  display: none;
-}
-
-.redes {
-  margin-top: 5rem;
-  width: 90%;
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.copyright {
-  margin-top: 7rem;
-  margin-bottom: 2rem;
-  color: rgb(0, 0, 0);
-  font-size: 2rem;
-  font-style: italic;
-}
-
-.bodyaudio {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.1fr 0.5fr 1fr 0.2fr;
-  grid-template-areas: "head head head" "texto texto texto" "lista1 video lista2" "footer footer footer";
-}
-
-.logoaudio {
-  display: none;
-}
-
-.navaudio ul {
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 3rem;
-}
-.navaudio li {
-  list-style-type: none;
-}
-.navaudio a {
-  text-decoration: none;
-  font-size: 3rem;
-  color: rgba(226, 211, 169, 0.473);
-  font-family: "Raleway", sans-serif;
-}
-.navaudio a:hover {
-  color: rgba(226, 211, 169, 0.781);
-}
-
-.headeraudio {
+.navaudio {
   grid-area: head;
+  background-color: #CFB4B4;
+  font-size: 3rem;
+}
+.navaudio .collapse {
+  justify-content: center;
+}
+.navaudio img {
+  height: 4.5rem;
+  width: 4rem;
 }
 
 .presentacionaudio {
@@ -186,8 +53,8 @@ body {
   margin-top: 5rem;
 }
 .video iframe {
-  width: 80rem;
-  height: 60rem;
+  width: 60rem;
+  height: 40rem;
 }
 
 .lista1 {
@@ -225,6 +92,13 @@ body {
   color: #fcbf7c;
 }
 
+.videoylista {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "lista1 video lista2";
+}
+
 .redes img {
   width: 4rem;
   height: 4rem;
@@ -235,6 +109,121 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #3f3737;
+}
+
+.bodyinicio {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.15fr 1fr 0.3fr 0.1fr;
+  grid-template-areas: "headerinicio  " "logoinicio  " "fechas " "footerinicio ";
+}
+
+.navbarini {
+  grid-area: headerinicio;
+  background-color: #CFB4B4;
+  font-size: 3rem;
+}
+.navbarini .collapse {
+  justify-content: center;
+}
+.navbarini img {
+  height: 4.5rem;
+  width: 4rem;
+}
+
+.carrusell {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  grid-area: carrete;
+  display: flex;
+  justify-content: center;
+}
+.carrusell img {
+  height: 50rem;
+}
+.carrusell .imagenescarru {
+  height: 40rem;
+  width: 50rem;
+}
+
+.fechas {
+  margin-top: 3rem;
+  font-size: 2.5rem;
+  padding-top: 5rem;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  grid-area: fechas;
+}
+.fechas li {
+  list-style-type: none;
+}
+.fechas ul {
+  margin-top: 2rem;
+}
+.fechas a {
+  text-decoration: none;
+  font-size: 3rem;
+  color: rgba(226, 211, 169, 0.671);
+  font-family: "Raleway", sans-serif;
+  transition: all 0.5 ease;
+}
+.fechas a:hover {
+  color: rgb(226, 211, 169);
+}
+.fechas p {
+  text-decoration: underline;
+  margin-top: 1rem;
+  color: black;
+}
+.fechas h2 {
+  margin-top: 2rem;
+  font-size: 4rem;
+  color: black;
+  text-decoration: underline;
+}
+
+.footerinicio {
+  grid-area: footerinicio;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footerinicio img {
+  height: 4rem;
+  width: 4rem;
+}
+
+.dropdown {
+  display: none;
+}
+
+.redes {
+  margin-top: 5rem;
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.copyright {
+  margin-top: 7rem;
+  margin-bottom: 2rem;
+  color: rgb(0, 0, 0);
+  font-size: 2rem;
+  font-style: italic;
 }
 
 .maindisco {
@@ -484,65 +473,46 @@ body {
 @media screen and (max-width: 768px) {
   .bodyinicio {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.25fr 1fr 0.25fr;
-    grid-template-areas: "head1 logo1" "fechas fechas" "foot1 foot1";
+    grid-template-rows: 0.2fr 1fr 1fr 0.25fr;
+    grid-template-areas: "headerinicio1 headerinicio1" "carrete carrete" "fechas fechas" "foot1 foot1";
   }
   .headerinicio {
-    grid-area: head1;
+    grid-area: headerinicio1;
   }
-  .headerinicio ul {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .headerinicio li {
-    margin-left: 0.5rem;
+  .mainini {
+    grid-area: carrete;
   }
   .fechas {
     grid-area: fechas;
     align-self: center;
   }
-  .logoinicio {
-    grid-area: logo1;
-    align-self: center;
-    justify-self: center;
-  }
-  .logoinicio img {
-    height: 20rem;
-    width: auto;
-  }
   .footerinicio {
     grid-area: foot1;
   }
 }
+.videoylista {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "lista1 video" "lista2 video";
+}
+
 @media screen and (max-width: 500px) {
   .bodyinicio {
     grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 1fr 0.3fr;
+    grid-template-rows: 0.3fr 0.3fr 0.3fr;
     grid-template-areas: "head1" "fechas1" "footer1";
   }
   .headerinicio {
-    display: flex;
-    justify-content: center;
-  }
-  .menunavinicio {
     grid-area: head1;
   }
-  .logoinicio {
+  .mainini {
     display: none;
   }
   .fechas {
     grid-area: fechas1;
   }
-  .dropdown {
-    display: flex;
-  }
   .footerinicio {
     grid-area: footer1;
-  }
-  .footerinicio p {
-    color: white;
   }
 }
 

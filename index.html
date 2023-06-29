@@ -14,57 +14,72 @@
 
     <link rel="stylesheet" href="css/estilos.css">
 </head >
-<body class="bodyinicio">
+<body class="bodyinicio container-fluid">
     
-    <header class="headerinicio">
-        
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#"><img src="multimedia/logo-cabeza.png" alt="logoindex"></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    
+    <header class="headerinicio row">
+        <nav class="navbar navbarini navbar-expand-lg ">
+            <div class="container-fluid ">
+              <a class="navbar-brand " href="#"><img src="multimedia/logo-cabeza.png" alt="logo de la banda"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="paginas/Audiovisuales.html">Audiovisuales</a>
                   </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Dropdown
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
+                  <li class="nav-item">
+                    <a class="nav-link" href="paginas/discografia.html">Discografia</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="paginas/influencias.html">Influencias</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="paginas/contacto.html">Contacto</a>
                   </li>
                   
                 </ul>
-                
               </div>
             </div>
           </nav>
-     <!-- <nav class="menunavinicio">
-        
-        <ul>
-            <li><a href="index.html" > inicio</a></li> <li><a href="paginas/Audiovisuales.html" > Audiovisuales</a></a></li>
-            <li><a href="paginas/discografia.html" > Discografia</a></li>
-            <li><a href="paginas/influencias.html" > Influencias</a></li>
-            <li><a href="paginas/contacto.html" > Contacto</a></li>
-            
-        </ul>
-    </nav>   -->
-    </header>
     
-        <div class="logoinicio">
-            <img src="multimedia/logotipo_cabeza3.png" alt="">
+    </header>
+    <main class="mainini">
+        <section class=" container-fluid carrusell">
+    <div id="carouselExampleAutoplaying" class="carousel slide imagenescarru" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="multimedia/6.JPG" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="multimedia/2.jfif" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="multimedia/3.JPG" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="multimedia/5.JPG" class="d-block w-100" alt="...">
+          </div>
+          
         </div>
-            <div class="fechas">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+    
+</main>
+
+             <div class="fechas">
                 <h2>Proximos Shows</h2>
                 <p>Entradas disponibles</p>
                 <ul>
@@ -75,11 +90,12 @@
                     
                 </ul>
 
-            </div>
+            </div> 
             
         
+        
        
-       
+           
     
    
     <footer class="footerinicio">  
@@ -93,7 +109,6 @@
 
 <p>copyright©2000-2023</p>
 </div>
-
 
 
     </footer>
