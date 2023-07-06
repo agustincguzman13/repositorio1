@@ -1,16 +1,6 @@
-// // .bodyaudio{
-// //     display: grid;
-// //     grid-template-columns: 1fr 1fr 1fr;
-// //     grid-template-rows:  .1fr .5fr 1fr .2fr;
-// //     grid-template-areas:
-// //     "head head head"
-// //     "texto texto texto"
-// //     "lista1 video lista2"
-// //     "footer footer footer";
-// // }
+
  .navaudio{
-     grid-area: head;
-     background-color: #CFB4B4;
+          background-color: #CFB4B4;
      font-size: 3rem;
     
      .collapse{
@@ -21,14 +11,10 @@
          width: 4rem;
      }
  }
-
-
-
      .presentacionaudio{
-         grid-area: texto;
-         display: flex;
-         flex-direction: column;
-         text-align: center;
+        //  display: flex;
+        //  flex-direction: column;
+          text-align: center;
          padding-bottom: 0.3rem;
          li{
              list-style-type: none;
@@ -64,8 +50,8 @@
              grid-area: video;
              margin-top: 5rem;
              iframe{
-                 width: 60rem;
-                 height: 40rem;
+                //  width: 60rem;
+                //  height: 40rem;
              }
          }
          .lista1{
@@ -103,11 +89,11 @@
 
          }
          .videoylista{
-            display: grid;
-            grid-template-rows: 1fr;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-areas: 
-            "lista1 video lista2";
+             display: grid;
+             grid-template-rows: 1fr;
+             grid-template-columns: 1fr 1fr 1fr;
+             grid-template-areas: 
+             "lista1 video lista2";
          }
          .redes img{
              width: 4rem;

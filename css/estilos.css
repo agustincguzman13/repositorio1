@@ -1,5 +1,4 @@
 .navaudio {
-  grid-area: head;
   background-color: #CFB4B4;
   font-size: 3rem;
 }
@@ -12,9 +11,6 @@
 }
 
 .presentacionaudio {
-  grid-area: texto;
-  display: flex;
-  flex-direction: column;
   text-align: center;
   padding-bottom: 0.3rem;
 }
@@ -52,11 +48,6 @@
   grid-area: video;
   margin-top: 5rem;
 }
-.video iframe {
-  width: 60rem;
-  height: 40rem;
-}
-
 .lista1 {
   grid-area: lista1;
   align-self: center;
@@ -111,6 +102,44 @@
   align-items: center;
 }
 
+@media screen and (max-width: 768px) {
+  .logo {
+    justify-self: center;
+  }
+}
+.bodyaudio {
+  background-color: #fff;
+}
+
+.videoylista {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "lista1 video" "lista2 .";
+}
+
+.iframe {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  .bodyinicio {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr 0.3fr 0.08fr;
+    grid-template-areas: "head1" "fechas1" "footer1";
+  }
+  .headerinicio {
+    grid-area: head1;
+  }
+  .mainini {
+    display: none;
+  }
+  .fechas {
+    grid-area: fechas1;
+  }
+  .footerinicio {
+    grid-area: footer1;
+  }
+}
 * {
   padding: 0;
   margin: 0;
@@ -125,15 +154,7 @@ body {
   background-color: #3f3737;
 }
 
-.bodyinicio {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 0.15fr 1fr 0.3fr 0.1fr;
-  grid-template-areas: "headerinicio  " "logoinicio  " "fechas " "footerinicio ";
-}
-
 .navbarini {
-  grid-area: headerinicio;
   background-color: #CFB4B4;
   font-size: 3rem;
 }
@@ -145,62 +166,23 @@ body {
   width: 4rem;
 }
 
-.carrusell {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  grid-area: carrete;
-  display: flex;
-  justify-content: center;
-}
-.carrusell img {
-  height: 50rem;
-}
-.carrusell .imagenescarru {
-  height: 40rem;
-  width: 50rem;
-}
-
-.fechas {
-  margin-top: 3rem;
-  font-size: 2.5rem;
-  padding-top: 5rem;
-  text-align: center;
-  font-family: "Raleway", sans-serif;
-  grid-area: fechas;
-}
-.fechas li {
-  list-style-type: none;
-}
-.fechas ul {
-  margin-top: 2rem;
-}
-.fechas a {
-  text-decoration: none;
-  font-size: 3rem;
-  color: rgba(226, 211, 169, 0.671);
-  font-family: "Raleway", sans-serif;
-  transition: all 0.5 ease;
-}
-.fechas a:hover {
-  color: rgb(226, 211, 169);
-}
 .fechas p {
-  text-decoration: underline;
-  margin-top: 1rem;
-  color: black;
+  color: rgba(226, 211, 169, 0.671);
+  font-size: 2rem;
 }
-.fechas h2 {
+.fechas h1 {
+  font-style: "Raleway", sans-serif;
   margin-top: 2rem;
   font-size: 4rem;
   color: black;
   text-decoration: underline;
+  text-align: left;
 }
 
 .footerinicio {
+  background-color: #CFB4B4;
   grid-area: footerinicio;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  height: 100%;
 }
 .footerinicio img {
   height: 4rem;
@@ -212,17 +194,16 @@ body {
 }
 
 .redes {
-  margin-top: 5rem;
-  width: 90%;
+  margin-top: 1rem;
   display: flex;
   justify-content: space-evenly;
 }
 
 .copyright {
-  margin-top: 7rem;
-  margin-bottom: 2rem;
+  margin-top: 1rem;
   color: rgb(0, 0, 0);
   font-size: 2rem;
+  text-align: center;
   font-style: italic;
 }
 
@@ -468,52 +449,6 @@ body {
 .footercontacto img {
   height: 4rem;
   width: 4rem;
-}
-
-@media screen and (max-width: 768px) {
-  .bodyinicio {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.2fr 1fr 1fr 0.25fr;
-    grid-template-areas: "headerinicio1 headerinicio1" "carrete carrete" "fechas fechas" "foot1 foot1";
-  }
-  .headerinicio {
-    grid-area: headerinicio1;
-  }
-  .mainini {
-    grid-area: carrete;
-  }
-  .fechas {
-    grid-area: fechas;
-    align-self: center;
-  }
-  .footerinicio {
-    grid-area: foot1;
-  }
-}
-.videoylista {
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas: "lista1 video" "lista2 video";
-}
-
-@media screen and (max-width: 500px) {
-  .bodyinicio {
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.3fr 0.3fr 0.3fr;
-    grid-template-areas: "head1" "fechas1" "footer1";
-  }
-  .headerinicio {
-    grid-area: head1;
-  }
-  .mainini {
-    display: none;
-  }
-  .fechas {
-    grid-area: fechas1;
-  }
-  .footerinicio {
-    grid-area: footer1;
-  }
 }
 
 /*# sourceMappingURL=estilos.css.map */
