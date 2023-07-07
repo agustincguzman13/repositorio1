@@ -1,10 +1,14 @@
+
 @import "audiovisual" ;
-@import "mediasqueries";
 @import "variables";
+@import "mixins";
+
+
 *{
     padding: 0;
     margin: 0;
     font-family: 'Raleway', sans-serif;
+   
 }
 
 html{
@@ -12,73 +16,65 @@ html{
 }
 body{
     
-    background-color: #3f3737;
+    background-color: $colorbody;
 }
 
+.bodyinicio{
+    @include grids1 (grid,1fr 1fr, .1fr 1fr .2fr,
+    "head1 head1"
+    "desc logo"
+    "footer1 footer1")
+}
+.headerinicio{
+    grid-area: head1;
+    
+}
 
 .navbarini{
     
-    background-color: #CFB4B4;
+    background-color:$colornav;
     font-size: 3rem;
-    
+
     .collapse{
-        justify-content: center;
+        
+        justify-content: end;
     }
     img{
-        height: 4.5rem;
+        height: 15.5rem;
         width: 4rem;
-    }
+        
 }
-
-.logocabeza{
-   
-   
-    
 }
 .fechas{    
-    
+    grid-area: desc;
+    margin-left: 3rem;
    
     p{
         color:$colorp;
-        font-size: 2rem;
+        font-size: $tamanop;
         
         
     }
     h1{ font-style: $estilop;
         margin-top: 2rem;
-        font-size: 4rem;
-        color: black;
+        font-size: $tamanoh1;
+        color: $color2;
         text-decoration: underline;
         text-align: left;
         
     }
 }
+.logo{
+    grid-area: logo;
+    justify-self: center;
+}
 .footerinicio{
-    background-color: $colorfooter;
-    grid-area: footerinicio;
-    height: 100%;
-    img{
-        height: 4rem;
-        width: 4rem;
-    }
+    grid-area: footer1;
+    @include footer;
 }
-.dropdown{
-    display: none;
-}
-.redes{
-    margin-top: 1rem;
-    
-    display: flex;
-    justify-content: space-evenly;
-}
-.copyright{
-    margin-top: 1rem;
-    
-    color: rgb(0, 0, 0);
-    font-size: 2rem;
-    text-align: center;
-    font-style: italic;
-}
+
+
+
 // PAGINA AUDIOVISUAL//
 
         //pagina discografia//
@@ -314,3 +310,47 @@ body{
             img{
                 height: 4rem;
                 width: 4rem;}}
+
+   //medias queries tablet//
+@media screen and (max-width: 768px)
+{   .bodyinicio{
+    grid-template-columns: 1fr;
+    grid-template-rows: .2fr 1fr 1fr .2fr;
+    grid-template-areas: 
+    "head1"
+    "desc"
+    "logo"
+    "footer1";
+}
+.fechas{
+    h1{
+        text-align: center;
+    }
+}
+}
+   
+
+        
+
+                //mediaquerie celular//
+                @media screen and (max-width: 500px){
+                    .bodyinicio{
+                        grid-template-columns: 1fr;
+                        grid-template-rows: .2fr 1fr .2fr;
+                        grid-template-areas: "head1" "desc" "footer1";
+                    }
+                    .logo{
+                        display: none;
+                    }
+                    .fechas{
+                        h1{
+                            text-align: left;
+                        }
+                    }
+                    .navbarini img{
+    
+                       margin-left: 1px;
+                    }
+                    
+                
+                }

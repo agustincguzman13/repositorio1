@@ -1,143 +1,158 @@
+.bodyaudio {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.1fr 0.4fr 1fr 0.1fr;
+  grid-template-areas: "headau" "prese2" "videoyli" "foottau";
+}
+
+.headeraudio {
+  grid-area: headau;
+}
+
 .navaudio {
-  background-color: #CFB4B4;
+  background-color: rgba(226, 211, 169, 0.671);
   font-size: 3rem;
 }
 .navaudio .collapse {
-  justify-content: center;
+  justify-content: end;
 }
 .navaudio img {
   height: 4.5rem;
   width: 4rem;
+  margin-left: 3rem;
 }
 
 .presentacionaudio {
+  grid-area: prese2;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 1fr 0.5fr;
+  grid-template-areas: "titulo1" "parra1" "discos1";
   text-align: center;
   padding-bottom: 0.3rem;
+}
+.presentacionaudio .titulo1 {
+  grid-area: titulo1;
+}
+.presentacionaudio .parrafo1 {
+  grid-area: parra1;
+}
+.presentacionaudio .discos {
+  grid-area: discos1;
+}
+.presentacionaudio h1 {
+  font-size: 4rem;
+  color: #c6d2f2;
+  margin-top: 3rem;
+  text-decoration: underline;
 }
 .presentacionaudio li {
   list-style-type: none;
 }
-.presentacionaudio h2 {
-  font-size: 5rem;
-  text-decoration: underline;
-  margin-top: 10rem;
-  color: rgb(0, 0, 0);
-}
 .presentacionaudio p {
-  font-size: 2.3rem;
-  padding: 0 2rem 0;
-  color: #fcbf7c;
+  font-size: 2rem;
+  color: rgba(226, 211, 169, 0.671);
 }
 .presentacionaudio ul {
   margin-top: 3rem;
   text-decoration: underline;
-  color: #f98304;
+  color: #c6d2f2;
   font-size: 2.3rem;
 }
-.presentacionaudio h4 {
-  font-size: 2.5rem;
-  color: #f98304;
-  display: none;
-}
 
-.parrafo1 {
+.videoylista {
+  grid-area: videoyli;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "lista1 video lista2";
+}
+.videoylista .parrafo1 {
   margin-top: 5rem;
 }
-
-.video {
+.videoylista .video {
   grid-area: video;
   margin-top: 5rem;
 }
-.lista1 {
-  grid-area: lista1;
+.videoylista .video iframe {
+  width: 70rem;
+  height: 40rem;
+  margin-bottom: 10rem;
+}
+.videoylista .lista1 {
   align-self: center;
   justify-self: center;
+  grid-area: lista1;
   font-size: 2.3rem;
 }
-.lista1 a {
+.videoylista .lista1 li {
+  margin-top: 2rem;
+}
+.videoylista .lista1 a {
   text-decoration: underline;
   list-style-type: none;
-  color: #f98304;
-  margin-left: 2rem;
+  color: #c6d2f2;
 }
-.lista1 a:hover {
-  font-size: 2.5rem;
+.videoylista .lista1 a:hover {
   color: #fcbf7c;
 }
-
-.lista2 {
+.videoylista .lista2 {
   grid-area: lista2;
   align-self: center;
   justify-self: center;
-  font-size: 2.3rem;
-  margin-left: 2rem;
+  font-size: 2rem;
 }
-.lista2 a {
-  margin-left: 2rem;
+.videoylista .lista2 li {
+  margin-top: 2rem;
+}
+.videoylista .lista2 a {
   text-decoration: underline;
   list-style-type: none;
-  color: #f98304;
+  color: #c6d2f2;
 }
-.lista2 a:hover {
-  font-size: 2.5rem;
+.videoylista .lista2 a:hover {
   color: #fcbf7c;
 }
 
-.videoylista {
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "lista1 video lista2";
-}
-
-.redes img {
-  width: 4rem;
-  height: 4rem;
-}
-
 .footeraudio {
-  grid-area: footer;
+  grid-area: foottau;
+  background-color: rgba(226, 211, 169, 0.671);
+  height: 100%;
+}
+.footeraudio img {
+  height: 4rem;
+  width: 4rem;
+}
+.footeraudio .redes {
+  margin-top: 1rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-evenly;
+}
+.footeraudio .copyright {
+  margin-top: 1rem;
+  color: rgb(0, 0, 0);
+  font-size: 2rem;
+  text-align: center;
+  font-style: italic;
 }
 
 @media screen and (max-width: 768px) {
-  .logo {
-    justify-self: center;
+  .videoylista {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.4fr 0.2fr;
+    grid-template-areas: "lista1 lista2" "video video";
   }
-}
-.bodyaudio {
-  background-color: #fff;
-}
-
-.videoylista {
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas: "lista1 video" "lista2 .";
-}
-
-.iframe {
-  display: none;
-}
-
-@media screen and (max-width: 500px) {
-  .bodyinicio {
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.3fr 0.3fr 0.08fr;
-    grid-template-areas: "head1" "fechas1" "footer1";
+  .lista1 {
+    display: flex;
+    justify-content: center;
   }
-  .headerinicio {
-    grid-area: head1;
+  .lista2 {
+    display: flex;
+    justify-content: center;
   }
-  .mainini {
-    display: none;
-  }
-  .fechas {
-    grid-area: fechas1;
-  }
-  .footerinicio {
-    grid-area: footer1;
+  .video {
+    display: flex;
+    justify-content: center;
   }
 }
 * {
@@ -154,18 +169,33 @@ body {
   background-color: #3f3737;
 }
 
+.bodyinicio {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.1fr 1fr 0.2fr;
+  grid-template-areas: "head1 head1" "desc logo" "footer1 footer1";
+}
+
+.headerinicio {
+  grid-area: head1;
+}
+
 .navbarini {
   background-color: #CFB4B4;
   font-size: 3rem;
 }
 .navbarini .collapse {
-  justify-content: center;
+  justify-content: end;
 }
 .navbarini img {
-  height: 4.5rem;
+  height: 15.5rem;
   width: 4rem;
 }
 
+.fechas {
+  grid-area: desc;
+  margin-left: 3rem;
+}
 .fechas p {
   color: rgba(226, 211, 169, 0.671);
   font-size: 2rem;
@@ -174,32 +204,31 @@ body {
   font-style: "Raleway", sans-serif;
   margin-top: 2rem;
   font-size: 4rem;
-  color: black;
+  color: #c6d2f2;
   text-decoration: underline;
   text-align: left;
 }
 
+.logo {
+  grid-area: logo;
+  justify-self: center;
+}
+
 .footerinicio {
-  background-color: #CFB4B4;
-  grid-area: footerinicio;
+  grid-area: footer1;
+  background-color: rgba(226, 211, 169, 0.671);
   height: 100%;
 }
 .footerinicio img {
   height: 4rem;
   width: 4rem;
 }
-
-.dropdown {
-  display: none;
-}
-
-.redes {
+.footerinicio .redes {
   margin-top: 1rem;
   display: flex;
   justify-content: space-evenly;
 }
-
-.copyright {
+.footerinicio .copyright {
   margin-top: 1rem;
   color: rgb(0, 0, 0);
   font-size: 2rem;
@@ -449,6 +478,33 @@ body {
 .footercontacto img {
   height: 4rem;
   width: 4rem;
+}
+
+@media screen and (max-width: 768px) {
+  .bodyinicio {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 1fr 1fr 0.2fr;
+    grid-template-areas: "head1" "desc" "logo" "footer1";
+  }
+  .fechas h1 {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  .bodyinicio {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 1fr 0.2fr;
+    grid-template-areas: "head1" "desc" "footer1";
+  }
+  .logo {
+    display: none;
+  }
+  .fechas h1 {
+    text-align: left;
+  }
+  .navbarini img {
+    margin-left: 1px;
+  }
 }
 
 /*# sourceMappingURL=estilos.css.map */

@@ -1,48 +1,71 @@
+@import "variables";
+@import "mixins";
 
+.bodyaudio{
+    @include grids1(grid, 1fr, .1fr .4fr 1fr .1fr,
+    "headau"
+     "prese2"
+      "videoyli"
+       "foottau")
+}
+.headeraudio{
+    grid-area: headau;
+}
  .navaudio{
-          background-color: #CFB4B4;
+          background-color:$colorp;
      font-size: 3rem;
-    
      .collapse{
-         justify-content: center;
+         justify-content: end;
      }
      img{
          height: 4.5rem;
          width: 4rem;
+         margin-left: 3rem;
      }
  }
      .presentacionaudio{
-        //  display: flex;
-        //  flex-direction: column;
+        grid-area: prese2;
+        @include grids1 (grid,1fr, .5fr 1fr .5fr,"titulo1" "parra1" "discos1");
           text-align: center;
          padding-bottom: 0.3rem;
+         .titulo1{
+            grid-area: titulo1;
+         }
+         .parrafo1{
+            grid-area: parra1;
+         }
+         .discos{
+            grid-area: discos1;
+         }
+         h1{ font-size: $tamanoh1;
+            color: $color2;
+            margin-top: 3rem;
+            text-decoration: underline;
+         }
          li{
              list-style-type: none;
          }
-         h2{
-             font-size: 5rem;
-             text-decoration: underline;
-             margin-top: 10rem;
-             color: rgb(0, 0, 0); }
+         
              p{
 
-                 font-size: 2.3rem;
-                 padding: 0 2rem 0;
-                 color:  #fcbf7c ;
+                 font-size: $tamanop;
+                
+                 color: $colorp ;
                 
              }
              ul{
                  margin-top: 3rem;
                  text-decoration: underline;
-                 color:  #f98304 ;
+                 color: $color2 ;
                  font-size: 2.3rem;
              }
-             h4{
-                 font-size: 2.5rem;
-                 color:  #f98304 ;
-                 display: none;
-             }
+             
          }
+        
+        .videoylista{
+            grid-area: videoyli;
+            @include grids1 (grid,1fr 1fr 1fr, 1fr, "lista1 video lista2");
+            
          .parrafo1{
              margin-top: 5rem;
          }
@@ -50,23 +73,26 @@
              grid-area: video;
              margin-top: 5rem;
              iframe{
-                //  width: 60rem;
-                //  height: 40rem;
+                width: 70rem;
+                height: 40rem;
+                margin-bottom: 10rem;
              }
+             
          }
          .lista1{
+            align-self: center;
+            justify-self: center;
              grid-area: lista1;
-              align-self: center;
-              justify-self: center;
              font-size: 2.3rem;
+             li{
+                margin-top: 2rem;
+             }
              a{
                  text-decoration: underline;
                  list-style-type: none;
-                 color: #f98304;
-                 margin-left: 2rem;
+                 color: $color2;
                  &:hover{
-                     font-size: 2.5rem;
-                     color: #fcbf7c;                    
+                     color: $colorp2;                    
                  }
              }
          }
@@ -74,35 +100,51 @@
              grid-area: lista2;
               align-self: center;
               justify-self: center;
-             font-size: 2.3rem;
-             margin-left: 2rem;
+             font-size: $tamanop;
+             li{
+                margin-top: 2rem;
+             }             
              a{
-                 margin-left: 2rem;
+                 
                  text-decoration: underline;
                  list-style-type: none;
-                 color: #f98304;
+                 color: $color2;
                  &:hover{
-                     font-size: 2.5rem;
-                     color: #fcbf7c;                    
+                     
+                     color: $colorp2;                    
                  }
-             }
+             }}}
 
+         
+         
+     
+             .footeraudio{
+                grid-area: foottau;
+                @include footer       
          }
-         .videoylista{
-             display: grid;
-             grid-template-rows: 1fr;
-             grid-template-columns: 1fr 1fr 1fr;
-             grid-template-areas: 
-             "lista1 video lista2";
-         }
-         .redes img{
-             width: 4rem;
-             height: 4rem;
-         }
-         .footeraudio {
-             grid-area: footer;
-             display: flex;
-             flex-direction: column;
-             align-items: center;
-       
-         }
+         @media screen and (max-width: 768px){
+            
+            .videoylista{
+                @include gridsmq (1fr 1fr, .4fr .2fr,
+                "lista1 lista2"
+                "video video")
+            }
+            .lista1{
+                @include dfjcc
+            }
+             .lista2{
+              @include dfjcc
+             }
+             .video{
+                @include dfjcc ;
+                
+            
+             }
+            }
+            // mediasqueries celular
+            @media screen and (max-width: 500px){
+                
+
+            }
+            
+         

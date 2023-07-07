@@ -1,0 +1,42 @@
+@mixin grids1 ($d, $cl, $f, $ga){
+    display: $d;
+    grid-template-columns: $cl;
+    grid-template-rows: $f;
+    grid-template-areas: $ga;
+}
+@mixin tamano($h, $w){
+    height: $h;
+
+}
+@mixin gridsmq ($c, $f, $gra){
+    grid-template-columns: $c;
+    grid-template-rows: $f;
+    grid-template-areas: $gra;
+}
+
+@mixin footer{
+ background-color: $colorp;
+height: 100%;
+img{
+    height: 4rem;
+    width: 4rem;
+}
+.redes{
+    margin-top: 1rem;
+    
+    display: flex;
+    justify-content: space-evenly;
+}
+.copyright{
+    margin-top: 1rem;
+    
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+    text-align: center;
+    font-style: italic;
+}
+}
+@mixin dfjcc{
+    display: flex;
+    justify-content: center;
+}
