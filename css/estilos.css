@@ -1,3 +1,204 @@
+.maincontact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.4fr 0.4fr 1fr;
+  grid-template-areas: "contact1 contact1" "form ." "textom mapa";
+}
+
+.menunavcontacto {
+  background-color: rgba(226, 211, 169, 0.671);
+  font-size: 3rem;
+}
+.menunavcontacto .collapse {
+  justify-content: end;
+}
+.menunavcontacto img {
+  height: 4.5rem;
+  width: 4rem;
+  margin-left: 3rem;
+}
+
+.contact1 {
+  grid-area: contact1;
+  text-align: center;
+  font-size: 2rem;
+  color: rgba(226, 211, 169, 0.671);
+  text-align: left;
+  font-style: italic;
+  margin-top: 3rem;
+  margin-left: 1rem;
+}
+.contact1 p {
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+}
+
+.form1 {
+  margin-left: 1rem;
+  grid-area: form;
+  color: #fcbf7c;
+}
+.form1 button {
+  margin-top: 2rem;
+  color: #000000;
+  background-color: #fff;
+}
+
+.mapa1 {
+  grid-area: mapa;
+  margin-left: 5rem;
+}
+.mapa1 iframe {
+  width: 50rem;
+  height: 35rem;
+}
+
+.textocontact {
+  font-size: 2rem;
+  color: rgba(226, 211, 169, 0.671);
+  text-align: left;
+  font-style: italic;
+  grid-area: textom;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footercontacto {
+  background-color: rgba(226, 211, 169, 0.671);
+  height: 100%;
+}
+.footercontacto img {
+  height: 4rem;
+  width: 4rem;
+}
+.footercontacto .redes {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+.footercontacto .copyright {
+  margin-top: 1rem;
+  color: rgb(0, 0, 0);
+  font-size: 2rem;
+  text-align: center;
+  font-style: italic;
+}
+
+@media screen and (max-width: 768px) {
+  .maincontact {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.4fr 0.4fr 1fr;
+    grid-template-areas: "contact1 contact1" "form textom" ". mapa";
+  }
+  .textocontact {
+    margin-left: 5rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .maincontact {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 0.5fr 1fr;
+    grid-template-areas: "contact1" "form" "textom" "mapa";
+  }
+  .mapa1 iframe {
+    margin-left: 0;
+    width: 30rem;
+    height: 20rem;
+  }
+}
+.maininflu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr;
+  grid-template-areas: "texto1 texto1 texto1" "spoty1 texto2 spoty2";
+  justify-content: end;
+}
+
+.carousel-inner {
+  margin-top: 15rem;
+  grid-area: texto2;
+}
+
+.txtpresentacion {
+  margin-top: 5rem;
+  text-align: center;
+  font-size: 2rem;
+  color: #fcbf7c;
+  text-align: left;
+  font-style: italic;
+  margin-left: 1rem;
+  grid-area: texto1;
+}
+.txtpresentacion p {
+  margin-top: 5rem;
+}
+
+.spotys iframe {
+  width: 40rem;
+}
+
+.a1er3 {
+  margin-top: 5rem;
+  grid-area: spoty1;
+}
+
+.a2do3 {
+  margin-left: 5rem;
+  margin-top: 5rem;
+  grid-area: spoty2;
+}
+
+.footerinflu {
+  grid-area: footerinicio;
+  background-color: rgba(226, 211, 169, 0.671);
+  height: 100%;
+}
+.footerinflu img {
+  height: 4rem;
+  width: 4rem;
+}
+.footerinflu .redes {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+.footerinflu .copyright {
+  margin-top: 1rem;
+  color: rgb(0, 0, 0);
+  font-size: 2rem;
+  text-align: center;
+  font-style: italic;
+}
+
+@media screen and (max-width: 768px) {
+  .maininflu {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 0.7fr;
+    grid-template-areas: "texto1 texto1" "spoty1 spoty2" "texto2 texto2";
+  }
+  .carousel-inner {
+    margin-top: 3rem;
+    margin-left: 20rem;
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .maininflu {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.5fr 0.5fr 0.6fr;
+    grid-template-areas: "texto1" "spoty1" "spoty2" "texto2";
+  }
+  .carousel-inner {
+    margin-top: 3rem;
+    margin-left: 0;
+  }
+  .a1er3 {
+    margin-top: 0;
+    margin-left: 5rem;
+    grid-area: spoty1;
+  }
+}
 .bodyaudio {
   display: grid;
   grid-template-columns: 1fr;
@@ -155,6 +356,122 @@
     justify-content: center;
   }
 }
+.maindisco {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.1fr 1fr 1fr;
+  grid-template-areas: "descrip descrip" "img1 cancion1" "cancion2 img2";
+}
+
+.maindisco img {
+  height: 35rem;
+  width: 25rem;
+}
+.maindisco ul {
+  color: #c6d2f2;
+}
+.maindisco li {
+  list-style-type: disc;
+  text-decoration: none;
+  font-size: 3rem;
+}
+.maindisco a {
+  text-decoration: underline;
+  color: #c6d2f2;
+}
+.maindisco h3 {
+  font-size: 3rem;
+  color: #fcbf7c;
+  text-decoration: underline;
+}
+
+.descripcion {
+  grid-area: descrip;
+  text-align: center;
+  font-size: 2rem;
+  color: rgba(226, 211, 169, 0.671);
+  text-align: left;
+  font-style: italic;
+  margin-left: 1rem;
+}
+.descripcion h1 {
+  text-align: center;
+  font-size: 4rem;
+  margin-top: 6rem;
+  margin-left: 0.5rem;
+  margin-bottom: 5rem;
+  font-style: italic;
+  text-decoration: underline;
+  color: #c6d2f2;
+}
+
+.img1 {
+  grid-area: img1;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 2rem;
+}
+
+.img2 {
+  grid-area: img2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 2rem;
+}
+
+.cancion1 {
+  grid-area: cancion1;
+  display: flex;
+  align-items: center;
+  margin-left: 2rem;
+}
+
+.cancion2 {
+  grid-area: cancion2;
+  margin-left: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.footerdisco {
+  background-color: rgba(226, 211, 169, 0.671);
+  height: 100%;
+  grid-area: footdisco;
+}
+.footerdisco img {
+  height: 4rem;
+  width: 4rem;
+}
+.footerdisco .redes {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+.footerdisco .copyright {
+  margin-top: 1rem;
+  color: rgb(0, 0, 0);
+  font-size: 2rem;
+  text-align: center;
+  font-style: italic;
+}
+
+@media screen and (max-width: 768px) {
+  .maindisco {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 0.5fr 0.5fr;
+    grid-template-areas: "descrip descrip" "img1 img2" "cancion1 cancion2";
+  }
+}
+@media screen and (max-width: 500px) {
+  .maindisco {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 0.2fr 0.2fr 0.2fr 0.2fr;
+    grid-template-areas: "descrip" "img1" "cancion1" "img2" "cancion2";
+  }
+}
 * {
   padding: 0;
   margin: 0;
@@ -181,15 +498,16 @@ body {
 }
 
 .navbarini {
-  background-color: #CFB4B4;
+  background-color: rgba(226, 211, 169, 0.671);
   font-size: 3rem;
 }
 .navbarini .collapse {
   justify-content: end;
 }
 .navbarini img {
-  height: 15.5rem;
+  height: 4.5rem;
   width: 4rem;
+  margin-left: 3rem;
 }
 
 .fechas {
@@ -234,250 +552,6 @@ body {
   font-size: 2rem;
   text-align: center;
   font-style: italic;
-}
-
-.maindisco {
-  display: grid;
-  grid-template-columns: 0.5fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas: "descripcion descripcion" "album1 canciones1" "canciones2 album2";
-}
-.maindisco img {
-  height: 35rem;
-  width: 25rem;
-}
-.maindisco h3 {
-  color: black;
-  text-decoration: underline;
-}
-
-.menunavdisco ul {
-  margin-top: 3rem;
-  display: flex;
-  justify-content: space-evenly;
-}
-.menunavdisco a {
-  text-decoration: none;
-  font-size: 3rem;
-  color: rgba(226, 211, 169, 0.473);
-  font-family: "Raleway", sans-serif;
-}
-.menunavdisco a:hover {
-  color: rgba(226, 211, 169, 0.781);
-}
-
-.descripcion {
-  grid-area: descripcion;
-  text-align: center;
-  font-size: 2rem;
-  color: #fcbf7c;
-  text-align: left;
-  font-style: italic;
-  margin-left: 1rem;
-}
-.descripcion h1 {
-  text-align: center;
-  font-size: 4rem;
-  margin-top: 6rem;
-  margin-left: 0.5rem;
-  margin-bottom: 5rem;
-  font-style: italic;
-  text-decoration: underline;
-  color: black;
-}
-
-.img1 {
-  grid-area: album1;
-  margin-top: 2rem;
-  align-self: center;
-  justify-self: right;
-  font-size: 1.5rem;
-}
-
-.cancion1 {
-  grid-area: canciones1;
-  justify-self: center;
-  align-self: center;
-  font-size: 3rem;
-}
-.cancion1 ul {
-  color: #f98304;
-}
-.cancion1 li {
-  list-style-type: disc #f98304;
-  text-decoration: none;
-}
-.cancion1 a {
-  color: #f98304;
-  text-decoration: underline;
-}
-
-.cancion2 {
-  grid-area: canciones2;
-  justify-self: center;
-  align-self: center;
-  font-size: 3rem;
-}
-.cancion2 ul {
-  color: #f98304;
-}
-.cancion2 li {
-  list-style-type: disc;
-  text-decoration: none;
-}
-.cancion2 a {
-  text-decoration: underline;
-  color: #f98304;
-}
-
-.img2 {
-  grid-area: album2;
-  align-self: center;
-  justify-self: center;
-  font-size: 1.5rem;
-}
-
-.footerdisco {
-  grid-area: footerinicio;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.footerdisco img {
-  height: 4rem;
-  width: 4rem;
-}
-
-.maininflu {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.5fr 1fr;
-  grid-template-areas: "texto1 texto1 texto1" "spoty1 texto2 spoty2";
-  justify-content: end;
-}
-
-.menunavinflu ul {
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 3rem;
-}
-.menunavinflu a {
-  text-decoration: none;
-  font-size: 3rem;
-  color: rgba(226, 211, 169, 0.473);
-  font-family: "Raleway", sans-serif;
-}
-.menunavinflu a:hover {
-  color: rgba(226, 211, 169, 0.7);
-}
-
-.txtpresentacion {
-  margin-top: 5rem;
-  text-align: center;
-  font-size: 2rem;
-  color: #fcbf7c;
-  text-align: left;
-  font-style: italic;
-  margin-left: 1rem;
-  grid-area: texto1;
-}
-.txtpresentacion p {
-  margin-top: 5rem;
-}
-
-.spotys iframe {
-  width: 40rem;
-}
-
-.a1er3 {
-  margin-top: 5rem;
-  grid-area: spoty1;
-}
-
-.a2do3 {
-  margin-left: 5rem;
-  margin-top: 5rem;
-  grid-area: spoty2;
-}
-
-.footerinflu {
-  grid-area: footerinicio;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.footerinflu img {
-  height: 4rem;
-  width: 4rem;
-}
-
-.menunavcontacto ul {
-  margin-top: 3rem;
-  display: flex;
-  justify-content: space-evenly;
-}
-.menunavcontacto a {
-  text-decoration: none;
-  font-size: 3rem;
-  color: rgba(226, 211, 169, 0.473);
-  font-family: "Raleway", sans-serif;
-}
-.menunavcontacto a:hover {
-  color: rgba(226, 211, 169, 0.7);
-}
-
-.contact1 {
-  grid-area: contact1;
-  text-align: center;
-  font-size: 2rem;
-  color: #fcbf7c;
-  text-align: left;
-  font-style: italic;
-  margin-top: 3rem;
-  margin-left: 1rem;
-}
-.contact1 p {
-  margin-top: 1rem;
-  margin-bottom: 4rem;
-}
-
-.form1 {
-  color: #f98304;
-}
-.form1 button {
-  margin-top: 2rem;
-  color: #000000;
-  background-color: #fff;
-}
-
-.maps {
-  margin-top: 3rem;
-  grid-area: mapa;
-  font-size: 2rem;
-  color: #fcbf7c;
-  text-align: left;
-  font-style: italic;
-  margin-left: 5rem;
-}
-.maps iframe {
-  margin-top: 5%;
-  width: 40rem;
-  height: 30rem;
-  margin-left: 1rem;
-}
-
-.textocontact {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.footercontacto {
-  text-align: center;
-}
-.footercontacto img {
-  height: 4rem;
-  width: 4rem;
 }
 
 @media screen and (max-width: 768px) {

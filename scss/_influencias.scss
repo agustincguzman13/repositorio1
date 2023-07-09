@@ -1,0 +1,88 @@
+@import "variables";
+@import "mixins";
+.maininflu{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr;
+    grid-template-areas:
+    "texto1 texto1 texto1"
+    "spoty1 texto2 spoty2"
+    ;
+    justify-content: end;
+}   
+.carousel-inner{
+    margin-top: 15rem;
+    grid-area: texto2;
+   
+    
+}
+
+    .txtpresentacion{
+
+        margin-top: 5rem;
+        text-align: center;
+        font-size: 2rem;
+        color:#fcbf7c;
+        text-align: left;
+        font-style: italic;
+        margin-left: 1rem;
+        grid-area: texto1;
+        p{
+            margin-top: 5rem;
+        }
+    }
+    .spotys iframe{
+        width: 40rem;}
+        .a1er3{
+            margin-top: 5rem;
+            grid-area: spoty1;
+           }
+           .a2do3{
+            margin-left: 5rem;
+            margin-top: 5rem;
+            grid-area: spoty2;
+        }
+        
+        .footerinflu {
+            grid-area: footerinicio;
+           @include footer ;
+        }
+        // medias queries tablet
+        @media screen and (max-width: 768px){
+            .maininflu{
+             grid-template-columns: 1fr 1fr;
+             grid-template-rows: 1fr 1fr .7fr;
+             grid-template-areas: 
+             "texto1 texto1"
+             "spoty1 spoty2"
+             "texto2 texto2";}
+             .carousel-inner{
+                margin-top: 3rem;
+                margin-left: 20rem;
+                margin-bottom: 2rem;
+                
+            }
+        }
+        // media querie celular
+        @media screen and (max-width: 500px){
+        .maininflu{
+           grid-template-columns: 1fr;
+           grid-template-rows: 1fr .5fr .5fr .6fr;
+           grid-template-areas: 
+           "texto1"
+           "spoty1"
+           "spoty2"
+           "texto2";
+        }
+        .carousel-inner{
+            margin-top: 3rem;
+
+            margin-left: 0;
+        }
+        .a1er3{
+            margin-top: 0;
+            margin-left: 5rem;
+            grid-area: spoty1;
+            
+
+    }}

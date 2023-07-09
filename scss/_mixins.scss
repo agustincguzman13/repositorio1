@@ -13,7 +13,22 @@
     grid-template-rows: $f;
     grid-template-areas: $gra;
 }
+@mixin menunav{
+    background-color:$colorp;
+    font-size: 3rem;
+    
+    
 
+    .collapse{
+        justify-content: end;
+    }
+    img{
+        height: 4.5rem;
+        width: 4rem;
+        margin-left: 3rem;
+    }
+
+}
 @mixin footer{
  background-color: $colorp;
 height: 100%;

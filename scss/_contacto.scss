@@ -1,0 +1,92 @@
+@import "variables";
+@import "mixins";
+
+.maincontact{
+    @include grids1 (grid, 1fr 1fr, .4fr .4fr 1fr,
+    "contact1 contact1"
+    "form ."
+    "textom mapa")
+}
+.menunavcontacto
+{
+    @include menunav ;}
+
+      
+        .contact1{
+            grid-area: contact1;
+            text-align: center;
+            font-size: 2rem;
+            color: $colorp;
+            text-align: left;
+            font-style: italic;
+            margin-top: 3rem;
+            margin-left: 1rem;
+            p{
+                margin-top: 1rem;
+                margin-bottom: 4rem;
+            }
+        }
+        .form1{
+            margin-left: 1rem;
+            grid-area: form;
+            color: $colorp2;
+            button{
+                margin-top: 2rem;
+                color: #000000;
+                background-color: #fff;
+            
+            }            
+        }
+        .mapa1{
+           
+            grid-area: mapa ;
+           
+            margin-left: 5rem;
+            iframe{
+                width: 50rem;
+                height: 35rem;
+            }
+        }
+        .textocontact{
+            font-size: 2rem;
+            color:$colorp;
+            text-align: left;
+            font-style: italic;
+            grid-area: textom;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .footercontacto {
+            @include footer}
+
+            // media queries tablet
+            @media screen and (max-width: 768px){
+                .maincontact{
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: .4fr .4fr 1fr;
+                grid-template-areas: 
+                "contact1 contact1"
+                "form textom"
+                ". mapa"  ; }
+                .textocontact{
+                    margin-left: 5rem;
+                }
+            }
+            @media screen and (max-width: 500px){
+                .maincontact{
+                    @include gridsmq (1fr,1fr 1fr .5fr 1fr,
+                    "contact1"
+                    "form"
+                    "textom"
+                    "mapa")
+                }
+                .mapa1{
+                    iframe{
+                        margin-left: 0;
+                        width: 30rem;
+                        height: 20rem;
+                    }
+                }
+                
+            }
